@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #6366f1;
+  --color-primary-dark: #4f46e5;
+  --color-accent: #22d3ee;
+  --color-accent-secondary: #f472b6;
+  --color-background: #ffffff;
+  --color-surface: #f3f4f6;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+
+  /* Glass effect tokens */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+
+  /* Gradient tokens */
+  --gradient-primary: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4);
+  --gradient-accent: linear-gradient(135deg, #06b6d4, #6366f1);
+  --gradient-card-border: linear-gradient(135deg, rgba(99,102,241,0.3), rgba(6,182,212,0.3));
+
+  /* Orb colors */
+  --orb-primary: rgba(99, 102, 241, 0.15);
+  --orb-accent: rgba(6, 182, 212, 0.12);
+  --orb-pink: rgba(244, 114, 182, 0.10);
+}
+
+.dark {
+  --color-primary: #818cf8;
+  --color-primary-dark: #6366f1;
+  --color-accent: #22d3ee;
+  --color-accent-secondary: #f472b6;
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+
+  /* Glass effect tokens */
+  --glass-bg: rgba(26, 31, 54, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  /* Gradient tokens */
+  --gradient-primary: linear-gradient(135deg, #818cf8, #a78bfa, #22d3ee);
+  --gradient-accent: linear-gradient(135deg, #22d3ee, #818cf8);
+  --gradient-card-border: linear-gradient(135deg, rgba(129,140,248,0.3), rgba(34,211,238,0.3));
+
+  /* Orb colors */
+  --orb-primary: rgba(129, 140, 248, 0.12);
+  --orb-accent: rgba(34, 211, 238, 0.10);
+  --orb-pink: rgba(244, 114, 182, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+/*
+ * Animation fallback (Requirement 11.5):
+ * Ensure all content is visible if Framer Motion fails to load or initialize.
+ * Framer Motion applies inline styles that override these defaults when active.
+ * If it doesn't load, the content remains visible via these CSS rules.
+ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* noscript fallback is handled via <noscript> in layout.tsx */
+
+/* Global focus-visible styles for keyboard navigation (Req 11.3) */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip navigation link */
+.skip-nav {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.skip-nav:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+  z-index: 100;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient border using pseudo-element */
+.gradient-border {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: var(--gradient-card-border);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Decorative gradient orb */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Section divider wave */
+.section-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.section-divider svg {
+  display: block;
+  width: 100%;
+  height: 48px;
+}
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px var(--orb-primary); }
+  50% { box-shadow: 0 0 40px var(--orb-primary), 0 0 60px var(--orb-accent); }
+}
+
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}

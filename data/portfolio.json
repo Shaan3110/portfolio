@@ -1,0 +1,180 @@
+{
+  "navigation": [
+    { "label": "Home", "sectionId": "home" },
+    { "label": "About", "sectionId": "about" },
+    { "label": "Skills", "sectionId": "skills" },
+    { "label": "Experience", "sectionId": "experience" },
+    { "label": "Courses", "sectionId": "education" },
+    { "label": "Projects", "sectionId": "projects" },
+    { "label": "Blogs", "sectionId": "blogs" }
+  ],
+  "skills": [
+    { "name": "Selenium", "percentage": 95, "category": "Automation Frameworks" },
+    { "name": "Playwright", "percentage": 85, "category": "Automation Frameworks" },
+    { "name": "TestNG", "percentage": 90, "category": "BDD Frameworks" },
+    { "name": "Cucumber", "percentage": 90, "category": "BDD Frameworks" },
+    { "name": "Appium", "percentage": 80, "category": "Automation Frameworks" },
+    { "name": "JavaScript", "percentage": 90, "category": "Programming Languages" },
+    { "name": "Java", "percentage": 85, "category": "Programming Languages" },
+    { "name": "TypeScript", "percentage": 80, "category": "Programming Languages" },
+    { "name": "Python", "percentage": 75, "category": "Programming Languages" },
+    { "name": "RestAssured", "percentage": 95, "category": "Automation Frameworks" },
+    { "name": "JMeter", "percentage": 85, "category": "Testing Tools" },
+    { "name": "BurpSuite", "percentage": 80, "category": "Testing Tools" },
+    { "name": "Jira", "percentage": 85, "category": "Testing Tools" },
+    { "name": "LambdaTest", "percentage": 85, "category": "Testing Tools" },
+    { "name": "BrowserStack", "percentage": 85, "category": "Testing Tools" },
+    { "name": "Actions", "percentage": 85, "category": "CI/CD & Management" },
+    { "name": "Jenkins", "percentage": 85, "category": "CI/CD & Management" }
+  ],
+  "experience": [
+    {
+      "role": "Software Test Engineer (Manual + Automation)",
+      "company": "Salescode.ai",
+      "period": "2022 - 2024",
+      "link": "",
+      "categories": [
+        {
+          "title": "Manual Testing",
+          "bullets": [
+            "Executed 300+ test cases across web and mobile platforms, achieving 95% defect detection rate",
+            "Performed functional, regression, and cross-browser testing to ensure product quality",
+            "Documented and tracked defects using Jira, reducing bug resolution time by 40%"
+          ]
+        },
+        {
+          "title": "Automation with Playwright",
+          "bullets": [
+            "Built end-to-end automation framework using Playwright with JavaScript, covering 200+ UI locators",
+            "Achieved 60% increase in testing efficiency by automating repetitive test scenarios",
+            "Implemented Page Object Model design pattern for maintainable and scalable test suites"
+          ]
+        },
+        {
+          "title": "API Testing",
+          "bullets": [
+            "Automated REST API testing using RestAssured, validating 100+ endpoints",
+            "Integrated API tests into CI/CD pipeline for continuous validation",
+            "Verified request/response payloads, status codes, and authentication flows"
+          ]
+        },
+        {
+          "title": "Test Case Management",
+          "bullets": [
+            "Managed and organized 300+ test cases using structured test management practices",
+            "Created comprehensive test plans and test strategies for multiple projects",
+            "Collaborated with development teams to define acceptance criteria and testing scope"
+          ]
+        },
+        {
+          "title": "Security Testing",
+          "bullets": [
+            "Performed security assessments using BurpSuite to identify vulnerabilities",
+            "Conducted OWASP Top 10 vulnerability testing on web applications",
+            "Reported and tracked security defects to ensure timely remediation"
+          ]
+        }
+      ]
+    },
+    {
+      "role": "Software Development Engineer in Test (SDET)",
+      "company": "Delhivery Ltd",
+      "period": "2024 - Current",
+      "link": "",
+      "categories": [
+        {
+          "title": "Manual Testing",
+          "bullets": [
+            "Executed comprehensive manual testing across logistics and supply chain platforms",
+            "Performed functional, integration, and regression testing for shipment tracking modules",
+            "Identified and documented critical defects using Jira, improving release stability by 35%"
+          ]
+        },
+        {
+          "title": "Automation with Playwright",
+          "bullets": [
+            "Developed Playwright-based automation suites for logistics dashboard and order management",
+            "Increased test coverage by 70% through automated regression and smoke test suites",
+            "Implemented data-driven testing patterns for diverse shipment and delivery scenarios"
+          ]
+        },
+        {
+          "title": "API Testing",
+          "bullets": [
+            "Automated REST API validation for logistics microservices using RestAssured, 150+ endpoints",
+            "Validated complex shipment lifecycle APIs including tracking, routing, and delivery",
+            "Integrated API test suites into CI/CD pipelines for continuous quality assurance"
+          ]
+        },
+        {
+          "title": "Test Case Management",
+          "bullets": [
+            "Managed 500+ test cases across multiple logistics modules",
+            "Designed test strategies for large-scale supply chain features",
+            "Coordinated with cross-functional teams to align testing efforts with sprint deliverables"
+          ]
+        },
+        {
+          "title": "Security Testing",
+          "bullets": [
+            "Conducted security assessments on logistics APIs and web portals using BurpSuite",
+            "Performed vulnerability testing focused on data privacy and shipment information security",
+            "Ensured compliance with security best practices for handling sensitive logistics data"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "course": "Playwright Automation with JavaScript",
+      "platform": "YouTube SDET-QA",
+      "period": "2024-Current",
+      "link": ""
+    },
+    {
+      "course": "RestAssured Automation with Cucumber",
+      "platform": "Udemy",
+      "period": "2023-Current",
+      "link": ""
+    },
+        {
+      "course": "B Tech CSE",
+      "platform": "Bennett University",
+      "period": "2019-2023",
+      "link": ""
+    }
+  ],
+  "projects": [
+    {
+      "title": "Amazon Automation with Selenium",
+      "description": "End-to-end test automation framework for Amazon using Selenium WebDriver with Java, covering product search, cart operations, and checkout flows.",
+      "thumbnailUrl": "",
+      "githubUrl": "https://github.com/Shaan3110/Selenium_amazon",
+      "link": "https://github.com/Shaan3110/Selenium_amazon"
+    },
+    {
+      "title": "Page Object Model with Playwright",
+      "description": "Automation framework built with Playwright and JavaScript using the Page Object Model design pattern for Amazon web application testing.",
+      "thumbnailUrl": "",
+      "githubUrl": "https://github.com/Shaan3110/PlayWright_automation_amazon",
+      "link": "https://github.com/Shaan3110/PlayWright_automation_amazon"
+    }
+  ],
+  "blogs": [
+    {
+      "slug": "getting-started-with-playwright",
+      "title": "Getting Started with Playwright for Test Automation",
+      "date": "2025-03-15",
+      "excerpt": "A beginner-friendly guide to setting up Playwright and writing your first end-to-end test.",
+      "tags": ["Playwright", "Automation", "Testing"]
+    },
+    {
+      "slug": "api-testing-with-restassured",
+      "title": "API Testing with RestAssured: A Practical Guide",
+      "date": "2025-02-20",
+      "excerpt": "Learn how to automate REST API testing using RestAssured with real-world examples and best practices.",
+      "tags": ["API Testing", "RestAssured", "Java"]
+    }
+  ]
+}
