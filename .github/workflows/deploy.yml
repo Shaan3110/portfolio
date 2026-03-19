@@ -39,12 +39,11 @@ jobs:
           node-version: 22
           cache: npm
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - run: npm ci
       - run: npm run build
         env:
           STATIC_EXPORT: "true"
+          REPO_NAME: ${{ github.event.repository.name }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out

@@ -45,14 +45,15 @@ export default function Navbar() {
   }, []);
 
   const pathname = usePathname();
-  const isHome = pathname === '/';
+  const basePath = process.env.__NEXT_ROUTER_BASEPATH || '';
+  const isHome = pathname === '/' || pathname === basePath || pathname === `${basePath}/`;
 
   const handleNavClick = (sectionId: string) => {
     closeMenu();
     if (isHome) {
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     } else {
-      window.location.href = `/#${sectionId}`;
+      window.location.href = `${basePath}/#${sectionId}`;
     }
   };
 
