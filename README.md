@@ -2,6 +2,10 @@
 
 Personal portfolio site built with Next.js 14, Tailwind CSS, and Framer Motion.
 
+## Hosted Link
+
+Open [https://suchintan.co.in/](Suchintan Portfolio) in your browser.
+
 ## Local Development
 
 ```bash
